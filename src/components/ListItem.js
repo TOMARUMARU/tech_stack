@@ -5,6 +5,14 @@ import { CardSection } from './common';
 import * as actions from '../actions';
 
 class ListItem extends Component {
+  renderDescription() {
+    if (this.porps.library.item.id === this.props.selectedLibraryId) {
+      return (
+        <Text>{this.props.library.item.desctiption}</Text>
+      );
+    }
+  }
+
   render() {
     const { titleStyle } = styles;
     const { id, title } = this.props.library.item;
