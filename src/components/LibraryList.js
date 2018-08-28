@@ -1,10 +1,14 @@
-import React { Component } from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux';
 
 class LibraryList extends Component {
   render() {
-    return:
-  };
+    return;
+  }
 }
 
-export default connect()(LibraryList);
+const mapStateToProps = state => {
+  console.log(state)
+};
+
+export default connect(mapStateToProps)(LibraryList);
