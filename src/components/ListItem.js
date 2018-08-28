@@ -6,9 +6,11 @@ import * as actions from '../actions';
 
 class ListItem extends Component {
   renderDescription() {
-    if (this.porps.library.item.id === this.props.selectedLibraryId) {
+    const { library, selectedLibraryId } = this.props;
+
+    if (library.item.id === selectedLibraryId) {
       return (
-        <Text>{this.props.library.item.desctiption}</Text>
+        <Text>{library.item.desctiption}</Text>
       );
     }
   }
@@ -27,6 +29,7 @@ class ListItem extends Component {
               {title}
             </Text>
           </CardSection>
+          {this.renderDescription()}
         </View>
       </TouchableWithoutFeedback>
     );
