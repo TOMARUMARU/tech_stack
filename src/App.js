@@ -8,7 +8,9 @@ import { Header } from './components/common';
 const App = () => {
   return (
     <Provider store={createStore(reducers)}>
-      <View />
+      <View>
+        <Header headerText="Tech Stack" />
+      </View>
     </Provider>
   );
 };
