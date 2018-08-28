@@ -7,14 +7,19 @@ import * as actions from '../actions';
 class ListItem extends Component {
   render() {
     const { titleStyle } = styles;
+    const { id, title } = this.props.library.item;
 
     return (
-      <TouchableWithoutFeedback>
-        <CardSection>
-          <Text style={titleStyle}>
-            {this.props.library.item.title}
-          </Text>
-        </CardSection>
+      <TouchableWithoutFeedback
+        onPress={() => this.props.selectLibrary(id)}
+      >
+        <View>
+          <CardSection>
+            <Text style={titleStyle}>
+              {title}
+            </Text>
+          </CardSection>
+        </View>
       </TouchableWithoutFeedback>
     );
   }
